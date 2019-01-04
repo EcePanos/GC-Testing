@@ -1,0 +1,29 @@
+#!/bin/bash
+# Deploy all to google cloud
+
+cd getFuncitons
+gcloud functions deploy getFunctions --runtime python37 --trigger-http
+cd ..
+cd getInstances
+gcloud functions deploy getInstances --runtime python37 --trigger-http
+cd ..
+cd getKeys
+gcloud functions deploy getKeys --runtime python37 --trigger-http
+cd ..
+cd getValues
+gcloud functions deploy getValues --runtime python37 --trigger-http
+cd ..
+cd getByTag
+gcloud functions deploy getByTag --runtime python37 --trigger-http
+cd ..
+cd startvm
+gcloud functions deploy startvm --runtime python37 --trigger-http
+cd ..
+cd stopvm
+gcloud functions deploy stopvm --runtime python37 --trigger-http
+cd ..
+cd deletevm
+gcloud functions deploy deletevm --runtime python37 --trigger-http
+cd ..
+cd deletefunction
+gcloud functions deploy deletefunction --runtime python37 --trigger-http

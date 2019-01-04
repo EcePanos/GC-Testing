@@ -1,0 +1,6 @@
+#!/bin/bash
+# Deploy to google cloud
+
+gcloud alpha functions delete getByTag
+
+gcloud functions deploy getByTag --runtime python37 --trigger-http

@@ -1,0 +1,6 @@
+#!/bin/bash
+# Deploy to google cloud
+
+gcloud alpha functions delete stopvm
+
+gcloud functions deploy stopvm --runtime python37 --trigger-http

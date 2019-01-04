@@ -1,0 +1,6 @@
+#!/bin/bash
+# Deploy to google cloud
+
+gcloud alpha functions delete detetefunction
+
+gcloud functions deploy deletefunction --runtime python37 --trigger-http
